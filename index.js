@@ -44,7 +44,7 @@ function paginate(query, options, callback) {
 
     var promises = {
         docs:  Promise.resolve([]),
-        count: this.estimatedDocumentCount(query).exec()
+        count: this.countDocuments(query).exec()
     };
 
     if (limit) {
